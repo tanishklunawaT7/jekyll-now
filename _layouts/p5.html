@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.min.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.sound.js'></script>
+    <style>
+      html, body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background:white;
+      }
+    </style>
+    <script>
+      function loadScript(url) {
+          cacheBustingUrl = url + "?" + Date.now(),
+          newScriptElement = document.createElement("script");
+          newScriptElement.setAttribute("src", cacheBustingUrl);
+          document.body.appendChild(newScriptElement);
+      }
+    </script>
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>

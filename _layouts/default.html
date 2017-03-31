@@ -42,10 +42,18 @@
       <div class="container">
         <footer class="footer">
           {% include svg-icons.html %}
+          <button onclick="document.location = document.location.origin + document.location.pathname + '?' + Date.now();">Refresh</button>
         </footer>
       </div>
     </div>
 
     {% include analytics.html %}
+  <script type='text/javascript'>
+    (function() {
+    document.querySelectorAll('iframe').forEach(function (el) {
+        el.src = el.getAttribute('data-src') + '/?' + Date.now();
+    });
+    })();
+  </script>
   </body>
 </html>
